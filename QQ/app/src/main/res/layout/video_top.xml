@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 信息栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_video_system_status"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp" >
+
+        <!-- 文件名 -->
+
+        <TextView
+            android:id="@+id/file_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="文件名"
+            android:textColor="@color/white" />
+        <!-- 电量 -->
+
+        <ImageView
+            android:id="@+id/electric_charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/ic_battery_10" />
+        <!-- 系统时间 -->
+
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <!-- 音量控制栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_video_volume_control"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- 静音 -->
+
+        <ImageView
+            android:id="@+id/mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/video_player_mute_selector" />
+        <!-- 音量进度条 -->
+
+        <SeekBar
+            android:id="@+id/volumn"
+            style="@android:style/Widget.SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="6dp"
+            android:minHeight="6dp"
+            android:layout_marginRight="20dp"
+            android:progress="50"
+            android:secondaryProgress="80"
+            android:progressDrawable="@drawable/video_seekbar_drawable"
+            android:thumb="@drawable/voideo_progress_thumb"
+
+            android:thumbOffset="0dp" />
+    </LinearLayout>
+    <!--//   thumbOffset这个保证滑块中心和进度条首尾两端的中心点是一致的-->
+</LinearLayout>

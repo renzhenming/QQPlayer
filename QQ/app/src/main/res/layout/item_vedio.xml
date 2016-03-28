@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <!-- icon -->
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/main_video_item_iv_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/video_default_icon" />
+    <!-- 文件名 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/main_video_item_iv_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toLeftOf="@+id/main_video_item_tv_size"
+
+            android:singleLine="true"
+            android:text="文件名"
+            android:textColor="@color/green"
+            android:textSize="16sp" />
+        <!-- 视频时间长度 -->
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/main_video_item_tv_title"
+            android:layout_below="@+id/main_video_item_tv_title"
+            android:text="时间长度"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/green"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <!-- 文件大小 -->
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="文件大小"
+        android:textColor="@color/green"
+        android:textSize="15sp" />
+
+</RelativeLayout>
